@@ -17,6 +17,11 @@ standerr <- function (x, na.rm = TRUE) {
   sd(x, na.rm) / sqrt(length(x))
 }
 
+rmsd <- function (x) {
+  m<-mean(x)
+  # sqrt (sum(m - x(i))/length(x))
+}
+
 test<-c(4, 4, 4, 5)
 
 standerr(test)
