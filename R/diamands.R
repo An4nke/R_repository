@@ -1,4 +1,5 @@
 library(ggplot2)
+library(reshape2) # package for big datasets
 class(diamonds)
 
 # get only entrys of high quality diamands
@@ -21,7 +22,10 @@ good_carat[order(good_carat$carat, decreasing = TRUE) &&  order(good_carat$price
 # melt diamonds dataset -> new columns id 
 # melt()
 
-library(reshape2) # package for big datasets
+
 diamonds$ID = rownames(diamonds)
 diamonds_melt<-melt(diamonds, id.vars = c("ID", "cut", "color", "clarity"))
 diamonds_melt
+
+# melt -> wide-format data and melts it into long-format
+# cast -> long-format data and casts it into wide-format data
