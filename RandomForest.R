@@ -159,23 +159,3 @@ for (i in 1:3)
   auc.perf <- performance(pred, measure = "auc")
   print(auc.perf@y.values)
 }
-
-############################################
-## prediction of A/CC/CCAII..
-############################################
-
-# occurance of different Motifs?
-# Motif A   0/1
-# Motif B   0/1
-# Motif C   0/1
-# Motif D   0/1
-# Motif E   0/1
-# length flexible loop  Int
-
-## table to be produced
-# Prot_ID Motif_A flexible_loop Motif_B Motif_C Motif_D Motif_E
-# MeBa_CCAI 1 70  1 1 1 1 1 1
-# ..
-
-# perlskript for motif search?? biostrings?? other R package?
-
